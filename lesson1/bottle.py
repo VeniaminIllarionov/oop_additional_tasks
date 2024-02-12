@@ -13,14 +13,17 @@
 
 
 class Bottle:
+    color: str
+    volume: float
 
     def __init__(self, color, volume):
-        ...
+        self.color = color
+        self.volume = volume
 
 
 bottle_1 = Bottle("Красная", 0.7)
-bottle_2 = ...
-bottle_3 = ...
+bottle_2 = Bottle("Белую", 0.3)
+bottle_3 = Bottle("Черную", 1)
 
 
 # код для проверки 
