@@ -15,7 +15,6 @@ class Person:
         age = date - year
         return cls(name, age)
 
-
     def display(self):
         return f"Это {self.name}, ему {self.age}"
 

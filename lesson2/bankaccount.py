@@ -12,7 +12,29 @@
 
 
 class BankAccount:
-    pass
+    balance: int
+
+    def __init__(self, balance):
+        self.balance = balance
+
+    @property
+    def balance(self):
+        return self._balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        return self.balance
+
+    def withdraw(self, amount):
+        self.balance = self.balance - amount
+        return self.balance
+
+    def close(self):
+        return self.balance
+
+    @balance.setter
+    def balance(self, value):
+        self._balance = value
 
 
 # код для проверки 
