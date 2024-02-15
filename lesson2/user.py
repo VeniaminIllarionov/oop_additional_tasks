@@ -29,26 +29,31 @@ class User:
 
     @password.setter
     def password(self, value):
-        password = value
-        self._password = password
+        self._password = value
 
     @property
     def is_admin(self):
         return self._is_admin
 
-    @is_admin.setter
+    @property
+    def _is_admin(self, _is_logged_in=None):
+        if _is_logged_in is not True:
+            return False
+        return True
+
+    @_is_admin.setter
     def _is_admin(self, v1):
-        self._is_admin = v1
+        _is_logged_in = v1
 
     @name.setter
     def name(self, value):
         self._name = value
 
     def login(self, password):
-        if password == self.password:
-            return True
+        if self.password == password:
+            print(True)
         else:
-            return False
+            print(False)
 
     # def logout(self):
 

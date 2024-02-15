@@ -26,7 +26,7 @@ class Rectangle:
 
     @classmethod
     def from_diagonal(cls, diagonal, aspect_ratio):
-        return cls(diagonal,aspect_ratio)
+        return cls(diagonal, aspect_ratio)
 
     @staticmethod
     def is_square(width, height):
@@ -34,6 +34,7 @@ class Rectangle:
             return True
         else:
             return False
+
 
 # код для проверки
 rectangle = Rectangle(4, 5)
