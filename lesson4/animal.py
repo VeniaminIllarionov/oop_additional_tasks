@@ -14,9 +14,26 @@
 """
 
 
-class Aminal:
-    pass
+class Animal:
+    name: str
 
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        if self.name == 'Animal':
+            print("?")
+
+class Dog(Animal):
+    def speak(self):
+        if self.name == 'Dog':
+            print("Woof!")
+
+
+class Cat(Animal):
+    def speak(self):
+        if self.name == 'Cat':
+            print("Meow!")
 
 # код для проверки 
 animal = Animal("Animal")
