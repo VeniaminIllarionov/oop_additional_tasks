@@ -18,10 +18,41 @@
 
 
 class Person:
-    pass
+    age: int
+    name: str
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_name(self):
+        return self.name
+
+    def get_age(self):
+        return self.age
 
 
-# код для проверки 
+class Employee2(Person):
+    salary: float
+
+    def __init__(self, name, age, salary):
+        super().__init__(name, age)
+        self.salary = salary
+
+    def get_salary(self):
+        return self.salary
+
+
+class Manager2(Employee2):
+    def __init__(self, name, age, salary, bonus):
+        super().__init__(name, age, salary)
+        self.bonus = bonus
+
+    def get_bonus(self):
+        return self.bonus
+
+
+# код для проверки
 person = Person("John", 30)
 print(person.get_name())  # John
 print(person.get_age())  # 30
