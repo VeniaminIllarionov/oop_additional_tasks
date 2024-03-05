@@ -15,7 +15,20 @@
 
 
 class Employee:
-    pass
+    name: str
+    age: int
+    solary: float
+
+    def __init__(self, name, age, solary):
+        self.name = name
+        if age < 18 or age > 127:
+            raise ValueError('Возраст должен быть не меньше 18 и не больше 127')
+        else:
+            self.age = age
+        if solary < 16_242:
+            raise ValueError('Оплата труда не может быть меньше 16242')
+        else:
+            self.solary = solary
 
 
 # код для проверки

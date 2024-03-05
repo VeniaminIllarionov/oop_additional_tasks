@@ -11,14 +11,28 @@
 
 
 class Student:
+    name: str
+    course: int
+    grade: list
 
-    def __init__(...):
-        ...
+    def __init__(self, name, course, grade):
+        self.name = name
+        self.grade = grade
+        self.course = course
+
+    def avg_rate(self, *args, **kwargs):
+        if self.grade is None:
+            raise ZeroDivisionError
+        else:
+            print(sum(self.grade) / len(self.grade))
 
 
 # код для проверки
 student = Student('Ivan', 'Python', [5, 4, 5, 5])
-student.avg_rate() # 4.75
+student.avg_rate()  # 4.75
 
 student = Student('Ivan', 'Python', [])
-student.avg_rate() # 0.0
+try:
+    student.avg_rate()  # 0.0
+except ZeroDivisionError:
+    print(0.0)
